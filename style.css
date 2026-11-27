@@ -1,0 +1,305 @@
+/* ROOT COLORS */
+
+:root{
+    --primary-color: #5636a5;
+    --lignt-purple: #e8e0fa;
+    --dark-color: #24232b;
+    --text-color: #6b6874;
+    --background-color: #f7f6f2;
+    --white-color: #ffffff;
+    --border-color: #e2dfd8;
+}
+
+/* Basic Styling */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Inter' , Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--dark-color);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+
+header{
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span{
+    color: var(--primary-color);
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a{
+    font-size: 14px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.nav-links a{
+    font-size: 14px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: var(--primary-color);
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: auto;
+    padding: 80px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero-tag {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.hero-text {
+    max-width: 520px;
+    margin-top: 25px;
+
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: #422783;
+}
+
+.btn-secondary {
+    border: 1px solid var(--border-color);
+    color: var(--dark-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    width: 420px;
+    height: 420px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-purple);
+    border-radius: 50%;
+}
+
+.visual-box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(86, 54, 165, 0.08);
+}
+
+.visual-box span {
+    font-size: 90px;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -5px;
+}
+
+.visual-box p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        gap: 30px;
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-visual {
+        width: 300px;
+        height: 300px;
+    }
+
+    .visual-box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .visual-box span {
+        font-size: 70px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        width: 260px;
+        height: 260px;
+    }
+
+    .visual-box {
+        width: 175px;
+        height: 175px;
+    }
+
+    .visual-box span {
+        font-size: 60px;
+    }
+}
